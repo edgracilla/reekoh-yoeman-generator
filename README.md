@@ -5,12 +5,11 @@ Generate plugin seed:
 
 ```bash
 yo demo-reekoh
-
-// or 
-
 yo demo-reekoh:<plugin>
-// yo demo-reekoh:gateway
+yo demo-reekoh:gateway
 ```
+
+> dont forget to ```bash npm link```
 
 ## License
 
