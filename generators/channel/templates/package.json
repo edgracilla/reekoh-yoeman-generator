@@ -1,0 +1,14 @@
+{
+  "name": "channel",
+  "version": "1.0.0",
+  "description": "Channel plugin seed",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "reekoh",
+  "license": "ISC",
+  "dependencies": {
+    "demo-reekoh-node": "^1.0.0"
+  }
+}
