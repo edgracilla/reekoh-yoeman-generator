@@ -9,7 +9,7 @@ yo demo-reekoh:<plugin>
 yo demo-reekoh:gateway
 ```
 
-> dont forget to ```bash npm link```
+> dont forget to 'npm link'
 
 ## License
 
