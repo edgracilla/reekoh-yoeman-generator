@@ -2,7 +2,7 @@
   "name": "channel",
   "version": "1.0.0",
   "description": "Channel plugin seed",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "gulp test"
   },

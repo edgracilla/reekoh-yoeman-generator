@@ -1,7 +1,7 @@
 'use strict';
 
 var reekoh = require('demo-reekoh-node');
-var _plugin = new reekoh.plugins.Storage();
+var _plugin = new reekoh.plugins.Channel();
 
 // var server, socket;
 
@@ -40,4 +40,6 @@ _plugin.once('ready', function () {
 	 */
 	 
 	_plugin.log('Channel has been initialized on port ' + _plugin.port);
+	console.log('Channel has been initialized on port ' + _plugin.port);
+
 });

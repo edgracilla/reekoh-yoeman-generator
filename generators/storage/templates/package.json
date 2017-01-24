@@ -2,7 +2,7 @@
   "name": "storage",
   "version": "1.0.0",
   "description": "Storage plugin seed",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "gulp test"
   },

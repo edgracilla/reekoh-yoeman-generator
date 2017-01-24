@@ -1,7 +1,7 @@
 'use strict';
 
 var reekoh = require('demo-reekoh-node');
-var _plugin = new reekoh.plugins.Storage();
+var _plugin = new reekoh.plugins.Gateway();
 
 // var server;
 
@@ -17,7 +17,8 @@ _plugin.once('ready', function () {
 	 * 1. Verify if the device id is registered by calling _plugin.requestDeviceInfo
 	 * 2. If the device is registered, forward the data by using _plugin.syncDevice
 	 */
-	platform.log('Gateway has been initialized on port ' + _plugin.port);
+	_plugin.log('Gateway has been initialized on port ' + _plugin.port);
+	console.log('Gateway has been initialized on port ' + _plugin.port);
 });
 
 /**

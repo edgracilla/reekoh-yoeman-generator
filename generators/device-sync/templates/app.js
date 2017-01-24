@@ -1,7 +1,7 @@
 'use strict';
 
 var reekoh = require('demo-reekoh-node');
-var _plugin = new reekoh.plugins.Storage();
+var _plugin = new reekoh.plugins.DeviceSync();
 
 // var client;
 
@@ -24,6 +24,7 @@ _plugin.once('ready', function (options) {
 	 */
 
 	_plugin.log('Device sync has been initialized.');
+	console.log('Device sync has been initialized.');
 });
 
 /**
