@@ -1,16 +1,15 @@
-'use strict';
+'use strict'
 
-var reekoh = require('demo-reekoh-node');
-var _plugin = new reekoh.plugins.DeviceSync();
+var reekoh = require('demo-reekoh-node')
+var _plugin = new reekoh.plugins.DeviceSync()
 
 // var client;
 
 /**
- * Emitted when the platform bootstraps the plugin. 
+ * Emitted when the platform bootstraps the plugin.
  * The plugin should listen once and execute its init process.
  */
 _plugin.once('ready', function (options) {
-
 	// TODO: Initialize your client or subscribe to the 3rd party service here.
 
 	/*
@@ -23,9 +22,9 @@ _plugin.once('ready', function (options) {
 	 * });
 	 */
 
-	_plugin.log('Device sync has been initialized.');
-	console.log('Device sync has been initialized.');
-});
+  _plugin.log('Device sync has been initialized.')
+  console.log('Device sync has been initialized.')
+})
 
 /**
  * Emitted when a sync has been requested by the Reekoh platform.
@@ -41,14 +40,14 @@ _plugin.on('sync', function () {
 	 *        });
 	 *    });
 	 */
-});
+})
 
 /**
  * Emitted when a new device has been registered on the platform.
  * @param device {Object} - The device details.
  */
 _plugin.on('adddevice', function (device) {
-	//TODO: Add device to 3rd party service
+	// TODO: Add device to 3rd party service
 
 	/* Sample Code:
 	 * client.addDevice(device, function() {
@@ -56,32 +55,32 @@ _plugin.on('adddevice', function (device) {
 	 * });
 	 */
 
-});
+})
 
 /**
- * Emitted when a new device has been updated on the platform. 
+ * Emitted when a new device has been updated on the platform.
  * @param device {Object} - The device details.
  */
 _plugin.on('updatedevice', function (device) {
-	//TODO: Update device from 3rd party service
+	// TODO: Update device from 3rd party service
 
 	/*  Sample Code:
 	 * client.updateDevice(device, function() {
 	 *   console.log(`${device.name} has been updated`);
 	 * });
 	 */
-});
+})
 
 /**
- * Emitted when a new device has been removed from the platform. 
+ * Emitted when a new device has been removed from the platform.
  * @param device {Object} - The device details.
  */
 _plugin.on('removedevice', function (device) {
-	//TODO: Remove device from 3rd party service
+	// TODO: Remove device from 3rd party service
 
 	/* Sample Code:
 	 * client.removeDevice(device._id, function() {
 	 *   console.log(`${device.name} has been removed`);
 	 * });
 	 */
-});
+})

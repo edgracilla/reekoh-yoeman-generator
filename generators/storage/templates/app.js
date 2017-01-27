@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
-var reekoh = require('demo-reekoh-node');
-var _plugin = new reekoh.plugins.Storage();
-
+var reekoh = require('demo-reekoh-node')
+var _plugin = new reekoh.plugins.Storage()
 
 /**
  * Emitted when device data is received.
@@ -11,14 +10,14 @@ var _plugin = new reekoh.plugins.Storage();
  */
 _plugin.on('data', function (data) {
 	// TODO: Insert the data to the database using the initialized connection.
-	console.log(data);
-});
+  console.log(data)
+})
 
 /**
- * Emitted when the platform bootstraps the plugin. 
+ * Emitted when the platform bootstraps the plugin.
  * The plugin should listen once and execute its init process.  
  */
 _plugin.once('ready', function () {
 	// TODO: Initialize the connection to your database here.
-	console.log('Storage has been initialized.');
-});
+  console.log('Storage has been initialized.')
+})
