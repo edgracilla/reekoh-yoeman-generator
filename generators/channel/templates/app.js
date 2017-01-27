@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-var reekoh = require('demo-reekoh-node');
-var _plugin = new reekoh.plugins.Channel();
+var reekoh = require('demo-reekoh-node')
+var _plugin = new reekoh.plugins.Channel()
 
 // var server, socket;
 
@@ -12,15 +12,14 @@ var _plugin = new reekoh.plugins.Channel();
  */
 _plugin.on('data', function (data) {
 	// TODO: Send data outbound to a connected client/socket i.e. socket.emit('data', data); or socket.write(data); or socket.send(data);
-	console.log(data);
-});
+  console.log(data)
+})
 
 /**
  * Emitted when the platform bootstraps the plugin.
  * The plugin should listen once and execute its init process.
  */
 _plugin.once('ready', function () {
-
 	// TODO: Initialize your channel server here. Channels should be able to send outbound data and also receive incoming requests.
 
 	/*
@@ -38,8 +37,7 @@ _plugin.once('ready', function () {
 	 * });
 	 *
 	 */
-	 
-	_plugin.log('Channel has been initialized on port ' + _plugin.port);
-	console.log('Channel has been initialized on port ' + _plugin.port);
 
-});
+  _plugin.log('Channel has been initialized on port ' + _plugin.port)
+  console.log('Channel has been initialized on port ' + _plugin.port)
+})

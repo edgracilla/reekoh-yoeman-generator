@@ -20,19 +20,14 @@ module.exports = class extends Generator {
 
     async.waterfall([
       (done) => {
-         self.fs.copy(
-          self.templatePath('app.js'),
-          self.destinationPath('app.js'))
-
         self.fs.copy(
-          self.templatePath('package.json'),
-          self.destinationPath('package.json'))
-
-        done()
-      },
+          self.templatePath('.'),
+          self.destinationPath('.'))
+          done()
+      }
     ], (err) => {
       if (err) return console.log(err)
       this.installDependencies()
     })
   }
-};
+}
