@@ -31,7 +31,6 @@ module.exports = class extends Generator {
         ]
       }
     ]).then(function (answers) {
-      console.log(answers)
 
       switch (answers.seed) {
         case 'Channel':

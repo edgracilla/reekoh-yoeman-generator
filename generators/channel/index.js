@@ -17,13 +17,26 @@ module.exports = class extends Generator {
 
   writing (a, b, c) {
     let self = this
-
+    //
     async.waterfall([
       (done) => {
         self.fs.copy(
           self.templatePath('.'),
           self.destinationPath('.'))
-          done()
+
+        self.fs.copy(
+          self.templatePath('.gitignore'),
+          self.destinationPath('.gitignore'))
+
+        self.fs.copy(
+          self.templatePath('.jshintrc'),
+          self.destinationPath('.jshintrc'))
+
+        self.fs.copy(
+          self.templatePath('.travis.yml'),
+          self.destinationPath('.travis.yml'))
+
+        done()
       }
     ], (err) => {
       if (err) return console.log(err)

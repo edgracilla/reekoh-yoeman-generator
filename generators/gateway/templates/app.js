@@ -1,5 +1,7 @@
 'use strict'
 
+let reekoh = require('demo-reekoh-node')
+let _plugin = new reekoh.plugins.Gateway()
 
 // var server;
 
