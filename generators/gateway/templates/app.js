@@ -1,14 +1,14 @@
 'use strict'
 
-let reekoh = require('demo-reekoh-node')
-let _plugin = new reekoh.plugins.Gateway()
+const reekoh = require('demo-reekoh-node')
+const _plugin = new reekoh.plugins.Gateway()
 
 // var server;
 
 /**
  * Emitted when the platform bootstraps the plugin. The plugin should listen once and execute its init process. 
  */
-_plugin.once('ready', function () {
+_plugin.once('ready', () => {
 	// TODO: Initialize your gateway/server here.
 
 	/*
@@ -17,7 +17,6 @@ _plugin.once('ready', function () {
 	 * 2. If the device is registered, forward the data by using _plugin.syncDevice
 	 */
   _plugin.log('Gateway has been initialized on port ' + _plugin.port)
-  console.log('Gateway has been initialized on port ' + _plugin.port)
 })
 
 /**
@@ -29,7 +28,7 @@ _plugin.once('ready', function () {
  *
  * @param message {Object} - The message which came from an Application or another Device from within the same pipeline as the gateway. 
  */
-_plugin.on('message', function (message) {
+_plugin.on('message', (message) => {
 	// Message Object
 	// {
 	//	device: deviceid,

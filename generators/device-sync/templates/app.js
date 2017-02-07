@@ -1,7 +1,7 @@
 'use strict'
 
-var reekoh = require('demo-reekoh-node')
-var _plugin = new reekoh.plugins.DeviceSync()
+const reekoh = require('demo-reekoh-node')
+const _plugin = new reekoh.plugins.DeviceSync()
 
 // var client;
 
@@ -9,7 +9,7 @@ var _plugin = new reekoh.plugins.DeviceSync()
  * Emitted when the platform bootstraps the plugin.
  * The plugin should listen once and execute its init process.
  */
-_plugin.once('ready', function (options) {
+_plugin.once('ready', () => {
 	// TODO: Initialize your client or subscribe to the 3rd party service here.
 
 	/*
@@ -23,14 +23,13 @@ _plugin.once('ready', function (options) {
 	 */
 
   _plugin.log('Device sync has been initialized.')
-  console.log('Device sync has been initialized.')
 })
 
 /**
  * Emitted when a sync has been requested by the Reekoh platform.
  * This event will be received by the plugin based on the schedule/interval set by the user on the Plugin Configuration.
  */
-_plugin.on('sync', function () {
+_plugin.on('sync', () => {
 	// TODO: Fetch updates from service
 
 	/* Sample Code:
@@ -46,7 +45,7 @@ _plugin.on('sync', function () {
  * Emitted when a new device has been registered on the platform.
  * @param device {Object} - The device details.
  */
-_plugin.on('adddevice', function (device) {
+_plugin.on('adddevice', (device) => {
 	// TODO: Add device to 3rd party service
 
 	/* Sample Code:
@@ -61,7 +60,7 @@ _plugin.on('adddevice', function (device) {
  * Emitted when a new device has been updated on the platform.
  * @param device {Object} - The device details.
  */
-_plugin.on('updatedevice', function (device) {
+_plugin.on('updatedevice', (device) => {
 	// TODO: Update device from 3rd party service
 
 	/*  Sample Code:
@@ -75,7 +74,7 @@ _plugin.on('updatedevice', function (device) {
  * Emitted when a new device has been removed from the platform.
  * @param device {Object} - The device details.
  */
-_plugin.on('removedevice', function (device) {
+_plugin.on('removedevice', (device) => {
 	// TODO: Remove device from 3rd party service
 
 	/* Sample Code:

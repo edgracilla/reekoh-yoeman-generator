@@ -1,9 +1,10 @@
 'use strict'
 
-var reekoh = require('demo-reekoh-node')
-var _plugin = new reekoh.plugins.Channel()
+const config = require('./config.js')
+const reekoh = require('demo-reekoh-node')
+const _plugin = new reekoh.plugins.Channel()
 
-// var server, socket;
+// let server, socket;
 
 /**
  * Emitted when device data is received.
@@ -20,12 +21,19 @@ _plugin.on('data', (data) => {
  * The plugin should listen once and execute its init process.
  */
 _plugin.once('ready', () => {
+
+	let err = config.validate(_plugin.config)
+
+  if (err) {
+    return console.error('Config Validation Error: \n', err)
+  }
+
 	// TODO: Initialize your channel server here. Channels should be able to send outbound data and also receive incoming requests.
 
 	/*
 	 * Example:
 	 *
-	 * var port = options.port;
+	 * let port = options.port;
 	 * server = createServer().listen(port);
 	 *
 	 * server.on('connection', (conn) => {
@@ -39,5 +47,4 @@ _plugin.once('ready', () => {
 	 */
 
   _plugin.log('Channel has been initialized on port ' + _plugin.port)
-  console.log('Channel has been initialized on port ' + _plugin.port)
 })
